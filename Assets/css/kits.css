@@ -1,0 +1,481 @@
+/* IMPORTANDO FONTES (Fredoka para títulos fofos e Nunito para leitura) */
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&family=Nunito:wght@400;700&display=swap');
+
+/* RESET BÁSICO */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif; /* Fonte padrão do site */
+}
+
+/* PALETA DE CORES DA YPE PAPER */
+:root {
+    /* Rosa extraído da Árvore/Texto */
+    --cor-primaria: #ec799a; 
+    
+    /* Verde Menta extraído do Círculo */
+    --cor-secundaria: #7ccbc3; 
+    
+    /* Variação mais escura do rosa para quando passar o mouse */
+    --cor-hover: #d65d80;
+    
+    /* Fundo creme bem clarinho (papel) */
+    --cor-fundo: #fffdf9; 
+    
+    /* Cinza escuro para texto (não usar preto puro) */
+    --cor-texto: #5a5a5a;
+    
+    --cor-borda: #eee;
+}
+
+body {
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* --- CABEÇALHO ALINHADO --- */
+
+.kabm {
+    background-color: var(--cor-primaria); /* Rosa Ype */
+    padding: 15px 0;
+    color: white;
+}
+
+.header-content {
+    display: flex;
+    align-items: center; /* Alinha tudo verticalmente no centro */
+    justify-content: space-between;
+    gap: 40px; /* Espaço generoso entre Logo, Busca e Direita */
+}
+
+/* 1. LOGO */
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: white;
+    flex-shrink: 0; /* Impede a logo de encolher */
+}
+
+.logo-img-small {
+    width: 100px;
+    height:100px;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+
+.logo-text h1 {
+    font-family: 'Fredoka', sans-serif;
+    font-size: 26px;
+    line-height: 1;
+}
+
+/* 2. BUSCA (Centro) */
+.busca-larga {
+    flex-grow: 1; /* Faz a busca ocupar todo o espaço do meio */
+    display: flex;
+    background: white;
+    border-radius: 5px;
+    overflow: hidden;
+    height: 42px; /* Altura confortável */
+    max-width: 600px; /* Limite para não ficar gigante em telas muito largas */
+}
+
+.busca-larga input {
+    flex-grow: 1;
+    border: none;
+    padding: 0 15px;
+    outline: none;
+    font-size: 14px;
+    color: #555;
+}
+
+.busca-larga button {
+    background-color: var(--cor-secundaria); /* Verde Ype */
+    border: none;
+    width: 60px;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.2s;
+}
+
+.busca-larga button:hover {
+    background-color: #5abcb1;
+}
+
+/* 3. PAINEL DIREITA (Container Geral) */
+.painel-direita {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+/* Coluna com Login e Endereço */
+.dados-usuario {
+    display: flex;
+    flex-direction: column; /* Empilha um embaixo do outro */
+    align-items: flex-start; /* Alinha texto à esquerda */
+    gap: 4px; /* Espacinho entre o Login e o Endereço */
+}
+
+/* Linha do Login */
+.usuario-login {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    color: white;
+    line-height: 1.2;
+}
+
+.usuario-login .material-icons {
+    font-size: 28px;
+}
+
+.usuario-login div {
+    display: flex;
+    flex-direction: column;
+}
+
+.usuario-login small {
+    font-size: 11px;
+    opacity: 0.9;
+}
+
+.usuario-login strong {
+    font-size: 13px;
+}
+
+/* Linha da Localização (Abaixo do login) */
+.location-selector {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 11px;
+    color: rgba(255, 255, 255, 0.9); /* Branco levemente transparente */
+    padding-left: 2px; /* Leve recuo para alinhar com texto de cima */
+}
+
+.location-selector .material-icons {
+    font-size: 14px; /* Ícone pequeno */
+}
+
+.location-selector strong {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+/* Ícones Extras (Carrinho e Favoritos) */
+.icones-extras {
+    display: flex;
+    gap: 15px;
+    border-left: 1px solid rgba(255,255,255,0.3); /* Linha separadora sutil */
+    padding-left: 15px;
+}
+
+.icones-extras a {
+    color: white;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.icones-extras a:hover {
+    transform: scale(1.1);
+}
+
+.icones-extras .material-icons {
+    font-size: 28px;
+}
+
+/* RESPONSIVO */
+@media (max-width: 900px) {
+    .header-content {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .busca-larga {
+        width: 100%;
+        max-width: none;
+    }
+    
+    .painel-direita {
+        width: 100%;
+        justify-content: space-between;
+    }
+}
+
+/* --- BARRA DE MENU (NAVBAR) --- */
+.nav-bar {
+    background-color: var(--cor-secundaria); /* Fundo VERDE (Menu inferior) */
+    padding: 0; /* Sem padding vertical geral */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.nav-bar .container {
+    display: flex;
+    align-items: center;
+}
+
+/* Botão Departamentos (Estilo Dropdown) */
+.btn-departamentos {
+    background-color: rgba(0, 0, 0, 0.1); /* Um pouco mais escuro que o fundo */
+    padding: 12px 20px;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-right: 20px;
+}
+
+.menu-lista {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.menu-lista a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    font-size: 13px;
+    text-transform: uppercase;
+    transition: 0.2s;
+}
+
+.menu-lista a:hover {
+    color: #fff0f5; /* Rosa claro no hover */
+}
+
+.oferta-nav a {
+    background: white;
+    color: var(--cor-primaria);
+    padding: 5px 15px;
+    border-radius: 15px;
+}
+
+/* Responsividade Básica do Header */
+@media (max-width: 900px) {
+    .header-content {
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px;
+    }
+    
+    .centro-header {
+        width: 100%;
+    }
+    
+    .acoes-usuario {
+        width: 100%;
+        justify-content: space-between;
+    }
+    
+    .nav-bar .container {
+        flex-direction: column;
+    }
+    
+    .menu-lista {
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 10px;
+    }
+}
+/* VITRINE DE PRODUTOS */
+.titulo-secao {
+    margin: 40px 0;
+    color: var(--cor-primaria);
+    text-align: center;
+    font-family: 'Fredoka', sans-serif;
+    font-size: 28px;
+    position: relative;
+}
+
+/* Detalhe fofo embaixo do título */
+.titulo-secao::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: var(--cor-secundaria);
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+.vitrine {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    gap: 30px;
+    padding-bottom: 50px;
+}
+
+.produto {
+    background: white;
+    border: 1px solid transparent;
+    padding: 20px;
+    border-radius: 15px; /* Card bem arredondado */
+    text-align: center;
+    transition: 0.4s;
+    position: relative;
+}
+
+/* Efeito de flutuar e borda rosa ao passar o mouse */
+.produto:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(236, 121, 154, 0.15); /* Sombra rosa suave */
+    border-color: var(--cor-primaria);
+}
+
+.produto img {
+    max-width: 100%;
+    height: 180px;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+
+.produto h3 {
+    font-size: 16px;
+    color: var(--cor-texto);
+    height: 45px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.avaliacao {
+    color: #FFD700; /* Dourado das estrelas */
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.votos {
+    color: #ccc;
+    font-size: 12px;
+}
+
+.precos {
+    margin: 15px 0;
+}
+
+.preco-antigo {
+    text-decoration: line-through;
+    color: #aaa;
+    font-size: 13px;
+}
+
+.preco-atual {
+    color: var(--cor-primaria);
+    font-size: 24px;
+    font-family: 'Fredoka', sans-serif;
+    font-weight: 600;
+}
+
+.parcelamento {
+    font-size: 12px;
+    color: #888;
+}
+
+.btn-comprar {
+    background-color: var(--cor-primaria); /* Botão Rosa */
+    color: white;
+    border: none;
+    padding: 12px;
+    width: 100%;
+    border-radius: 25px; /* Botão cápsula */
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-weight: bold;
+    font-size: 14px;
+    transition: 0.3s;
+    box-shadow: 0 4px 10px rgba(236, 121, 154, 0.3);
+}
+
+.btn-comprar:hover {
+    background-color: var(--cor-hover);
+    transform: scale(1.02);
+}
+
+/* FOOTER */
+footer {
+    background-color: var(--cor-secundaria); /* Footer Verde */
+    color: white;
+    text-align: center;
+    padding: 30px;
+    margin-top: auto;
+    font-weight: bold;
+}
+
+/* --- BARRA DE BENEFÍCIOS --- */
+.beneficios-bar {
+    background-color: white;
+    padding: 20px 0;
+    border-bottom: 1px solid var(--cor-borda);
+    margin-bottom: 30px; /* Espaço para o próximo elemento */
+}
+
+.beneficios-content {
+    display: flex;
+    justify-content: space-around; /* Espalha os itens igualmente */
+    align-items: center;
+    flex-wrap: wrap; /* Para funcionar no celular */
+    gap: 20px;
+}
+
+.beneficio-item {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Espaço entre ícone e texto */
+}
+
+.icone-ben {
+    font-size: 36px; /* Ícone grande */
+    color: var(--cor-primaria); /* Rosa Ype Paper */
+}
+
+/* Borda arredondada em volta do ícone (opcional, fica charmoso) */
+.icone-ben {
+    background-color: #fff0f5; /* Fundo rosinha claro */
+    padding: 10px;
+    border-radius: 50%;
+}
+
+.texto-ben {
+    display: flex;
+    flex-direction: column;
+}
+
+.texto-ben strong {
+    color: var(--cor-texto);
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.texto-ben small {
+    color: #888; /* Cinza mais claro para o subtítulo */
+    font-size: 12px;
+}
+
+/* RESPONSIVO: No celular, empilha um embaixo do outro */
+@media (max-width: 768px) {
+    .beneficios-content {
+        flex-direction: column;
+        align-items: flex-start; /* Alinha à esquerda */
+    }
+}
