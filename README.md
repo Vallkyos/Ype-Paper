@@ -49,8 +49,7 @@ A identidade visual foi baseada na logo, utilizando cores que remetem à criativ
 
 ## 📂 Como Executar o Projeto
 
-1.  # 1. Clone este repositório
-    $ git clone [https://github.com/Vallkyos/Ype-Paper.git](https://github.com/Vallkyos/Ype-Paper.git)
+1.  Clone este repositório:  $ git clone [https://github.com/Vallkyos/Ype-Paper.git](https://github.com/Vallkyos/Ype-Paper.git)
 2.  Certifique-se de que a pasta `assets` ou `img` contém todas as imagens dos produtos.
 3.  Abra o arquivo `index.html` em qualquer navegador moderno (Chrome, Firefox, Edge).
 
