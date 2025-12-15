@@ -479,3 +479,142 @@ footer {
         align-items: flex-start; /* Alinha à esquerda */
     }
 }
+/* --- Banner Oferta Taylor Swift (Final) --- */
+
+.banner-oferta-taylor {
+    /* --- CONFIGURAÇÃO DO FUNDO CLARINHO --- */
+    /* Coloque o caminho da sua textura clara aqui dentro das aspas: */
+    background-image: url('C:\Users\tayna\OneDrive\Área de Trabalho\Papelaria\Ype-Paper-1\Assets\img\promos\agenda1.png');
+    
+    /* Configurações para a imagem de fundo cobrir tudo corretamente */
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    /* Cor de reserva (caso a imagem não carregue, fica um cinza bem clarinho) */
+    background-color: #f9f9f9; 
+
+    /* Linha rosa na base para separar do resto do site */
+    border-bottom: 4px solid #F07C98;
+    
+    padding: 50px 0;
+    margin-bottom: 40px;
+    width: 100%;
+}
+
+.container-oferta {
+    max-width: 1200px; /* Largura máxima do conteúdo */
+    margin: 0 auto; /* Centraliza na tela */
+    display: flex; /* Layout lado a lado */
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: space-between;
+    padding: 0 20px;
+    gap: 50px; /* Espaço entre texto e imagem */
+}
+
+/* --- Lado Esquerdo: Textos --- */
+.info-oferta {
+    flex: 1; /* Ocupa o espaço disponível */
+    max-width: 550px;
+}
+
+.titulo-oferta {
+    font-size: 2rem;
+    color: #444; /* Cinza escuro */
+    font-weight: 800;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.subtitulo-oferta {
+    font-size: 1.5rem;
+    color: #F07C98; /* Rosa da marca para destacar o nome do kit */
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.descricao-oferta {
+    color: #666; /* Cinza médio para leitura */
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+/* --- Preços --- */
+.preco-box {
+    margin-bottom: 30px;
+}
+
+.preco-antigo {
+    display: block;
+    text-decoration: line-through;
+    color: #999;
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+
+.preco-novo {
+    color: #333; /* Cinza chumbo forte */
+    font-weight: bold;
+    display: flex;
+    align-items: baseline;
+}
+
+.preco-novo .moeda {
+    font-size: 1.5rem;
+    margin-right: 5px;
+}
+
+.preco-novo .valor {
+    font-size: 3.5rem; /* Valor bem grande */
+    line-height: 1;
+}
+
+/* --- Botão --- */
+.btn-garantir {
+    display: inline-block;
+    background-color: transparent;
+    border: 3px solid #F07C98; /* Borda rosa mais grossa */
+    color: #F07C98; /* Texto rosa */
+    padding: 15px 40px;
+    border-radius: 50px;
+    font-weight: 800;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.btn-garantir:hover {
+    background-color: #F07C98; /* Fica rosa preenchido no mouse over */
+    color: white; /* Texto vira branco */
+    transform: translateY(-3px); /* Leve subidinha */
+    box-shadow: 0 5px 15px rgba(240, 124, 152, 0.4);
+}
+
+.aviso-legal {
+    margin-top: 15px;
+    font-size: 0.85rem;
+    color: #aaa;
+    font-style: italic;
+}
+
+/* --- Lado Direito: Container da Imagem --- */
+.img-oferta-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    max-width: 500px;
+}
+
+/* --- A FOTO DO PRODUTO (Estilo da tag <img>) --- */
+.img-kit-taylor {
+    width: 100%;
+    /* O segredo do quadrado perfeito: */
+    aspect-ratio: 1 / 1; 
+    object-fit: cover; /* Garante que a imagem preencha sem distorcer */
+    border-radius: 30px; /* Bordas arredondadas */
+    box-shadow: 0 15px 40px rgba(0,0,0,0.15); /* Sombra elegante */
+    border: 5px solid white; /* Moldura branca fina para acabamento */
+}
