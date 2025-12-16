@@ -479,3 +479,30 @@ footer {
         align-items: flex-start; /* Alinha à esquerda */
     }
 }
+
+/* Container que segura o banner */
+.banner-carrosel {
+    width: 100%; /* Ocupa toda a largura da janela */
+    margin-bottom: 30px; /* Dá um espaço antes de começar os produtos */
+    background-color: #f4f4f4; /* Uma cor de fundo caso a imagem demore a carregar */
+    display: flex;
+    justify-content: center;
+}
+
+/* A imagem em si */
+.img-banner {
+    width: 100%; /* FORÇA a imagem a ocupar 100% do espaço disponível */
+    max-width: 1400px; /* (Opcional) Impede que a imagem fique gigante em telas 4k */
+    height: auto; /* IMPORTANTE: Mantém a proporção correta para não "achatar" a imagem */
+    display: block; /* Remove espaços brancos estranhos embaixo da imagem */
+    object-fit: cover; /* Garante um preenchimento bonito */
+}
+
+/* Ajuste para telas menores (Celular) */
+@media (max-width: 768px) {
+    .img-banner {
+        /* No celular, a imagem horizontal pode ficar muito pequena.
+           Se quiser, podemos aumentar a altura aqui, mas o padrão acima já funciona bem. */
+        width: 100%; 
+    }
+}
