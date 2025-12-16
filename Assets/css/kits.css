@@ -479,3 +479,134 @@ footer {
         align-items: flex-start; /* Alinha à esquerda */
     }
 }
+/* --- Seção de Oferta do Dia (Layout Vertical) --- */
+
+.secao-oferta-dia {
+    padding: 40px 20px;
+    background-color: #fff; /* Fundo branco limpo */
+    margin-bottom: 40px;
+}
+
+.container-principal {
+    max-width: 1000px; /* Largura máxima para não ficar muito esticado */
+    margin: 0 auto; /* Centraliza tudo na página */
+}
+
+/* --- 1. Imagem de Destaque no Topo --- */
+.img-destaque-container {
+    text-align: center; /* Centraliza a imagem horizontalmente */
+    margin-bottom: 30px; /* Espaço entre a imagem e o texto abaixo */
+}
+
+.img-kit-destaque {
+    width: 100%; /* Ocupa a largura disponível do container */
+    max-width: 800px; /* Mas não passa de 800px para não ficar gigante */
+    height: auto; /* Mantém a proporção */
+    border-radius: 20px; /* Bordas arredondadas */
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1); /* Sombra suave */
+}
+
+/* --- 2. Informações da Oferta (Centralizadas) --- */
+.info-oferta-centralizado {
+    text-align: center; /* Centraliza todo o texto, preço e botão */
+    max-width: 700px; /* Limita a largura do texto para ficar mais fácil de ler */
+    margin: 0 auto; /* Centraliza o bloco de texto */
+}
+
+.titulo-oferta {
+    font-size: 2rem;
+    color: #444;
+    font-weight: 800;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.subtitulo-oferta {
+    font-size: 1.5rem;
+    color: #F07C98; /* Rosa da marca */
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.descricao-oferta {
+    color: #666;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+/* --- Preços Centralizados --- */
+.preco-box-centralizado {
+    margin-bottom: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza os itens do preço */
+}
+
+.preco-antigo {
+    text-decoration: line-through;
+    color: #999;
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+}
+
+.preco-novo {
+    color: #333;
+    font-weight: bold;
+    display: flex;
+    align-items: baseline;
+}
+
+.preco-novo .moeda {
+    font-size: 1.5rem;
+    margin-right: 5px;
+}
+
+.preco-novo .valor {
+    font-size: 3.5rem;
+}
+
+/* --- Botão Centralizado --- */
+.btn-garantir-centralizado {
+    display: inline-block; /* Necessário para o text-align: center funcionar */
+    background-color: #F07C98; /* Fundo rosa */
+    color: white; /* Texto branco */
+    padding: 15px 40px;
+    border-radius: 50px;
+    font-weight: 800;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(240, 124, 152, 0.3);
+    border: none; /* Remove a borda pois agora tem fundo */
+}
+
+.btn-garantir-centralizado:hover {
+    background-color: #d66b84; /* Um rosa um pouco mais escuro no hover */
+    transform: translateY(-3px);
+}
+
+.aviso-legal {
+    margin-top: 20px;
+    font-size: 0.85rem;
+    color: #aaa;
+    font-style: italic;
+}
+
+/* --- Responsividade (Ajustes para Celular) --- */
+@media (max-width: 600px) {
+    .titulo-oferta {
+        font-size: 1.6rem;
+    }
+    .subtitulo-oferta {
+        font-size: 1.3rem;
+    }
+    .preco-novo .valor {
+        font-size: 3rem;
+    }
+    .img-kit-destaque {
+        border-radius: 15px; /* Bordas um pouco menores no celular */
+    }
+} 
