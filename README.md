@@ -13,9 +13,9 @@ O objetivo foi aplicar conceitos fundamentais de **HTML5** e **CSS3**, criando u
 Trabalho realizado pelos alunos do curso de **Sistemas para Internet** (IFRO):
 
 * **Vinicius Silva de Oliveira** 
-* **[Nome do Integrante 2]** - 
-* **[Nome do Integrante 3]** - 
-* **[Nome do Integrante 4]** - 
+* **Letícia Vitória Firmino** - 
+* **Tayná Vitória Queiroz Moraes** - 
+
 
 ## 🚀 Funcionalidades Implementadas
 
